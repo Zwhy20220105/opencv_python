@@ -14,3 +14,8 @@ cv.bitwise_and()函数执行的是按位与操作，它将对src1和src2的对�
 >img1_bg = cv.bitwise_and(roi,roi,mask = mask_inv)  
 
 mask = mask_inv不是赋值,而是显式指定函数的参数  
+
+3. 元组用法
+>height, width = img.shape[:2]
+     
+[:2]返回值是img.shape的前两个元素
