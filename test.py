@@ -18,8 +18,8 @@ import cv2 as cv
 import numpy as np
 #加载两张图片
 cv.namedWindow("res", cv.WINDOW_NORMAL)
-img1 = cv.imread('messi5.jpg')
-img2 = cv.imread('opencv-logo.png')
+img1 = cv.imread('./data/messi5.jpg')
+img2 = cv.imread('./data/opencv-logo.png')
 # print(img2.shape)
 # #img2 = img2[0:187,0:150]
 # cv.imshow('res',img2)
