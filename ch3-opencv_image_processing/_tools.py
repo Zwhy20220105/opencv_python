@@ -15,6 +15,7 @@ def plot_image(index, img, strName,color='viridis'):
     plt.xticks([]), plt.yticks([])
 
 
+
 def AddSaltPepperNoise(src, rate):
     """
     给输入图像添加椒盐噪声。
