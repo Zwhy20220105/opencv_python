@@ -15,6 +15,30 @@ def plot_image(index, img, strName,color='viridis'):
     plt.xticks([]), plt.yticks([])
 
 
+def padding_image_with_black(img, scale):
+    # 获取图像的原始尺寸
+    height, width = img.shape[:2]
+
+    # 计算新的尺寸
+    new_height = int(height * scale)
+    new_width = int(width * scale)
+
+    # 创建新的黑色背景图像
+    background = np.zeros((new_height, new_width, 3), dtype=np.uint8)
+
+    # 计算图像在新背景中的起始坐标
+    start_x = (new_width - width) // 2
+    start_y = (new_height - height) // 2
+
+    # 将原始图像复制到背景图像中心的相应位置
+    background[start_y:start_y+height, start_x:start_x+width] = img
+
+    # 返回结果图像
+    return background
+
+
+
+
 
 def AddSaltPepperNoise(src, rate):
     """
