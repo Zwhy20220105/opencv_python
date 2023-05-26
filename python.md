@@ -19,3 +19,5 @@ mask = mask_inv不是赋值,而是显式指定函数的参数
 >height, width = img.shape[:2]
      
 [:2]返回值是img.shape的前两个元素
+
+4. masked_equal是NumPy库中的一个函数，用于创建一个掩码数组，将数组中特定的值屏蔽（遮蔽）起来。
