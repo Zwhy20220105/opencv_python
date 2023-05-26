@@ -17,14 +17,14 @@ def plot_image(index, img, strName,color='viridis'):
 
 def padding_image_with_black(img, scale):
     # 获取图像的原始尺寸
-    height, width = img.shape[:2]
+    height, width = img.shape
 
     # 计算新的尺寸
-    new_height = int(height * scale)
-    new_width = int(width * scale)
+    new_height = height * scale
+    new_width = width * scale
 
     # 创建新的黑色背景图像
-    background = np.zeros((new_height, new_width, 3), dtype=np.uint8)
+    background = np.zeros((new_height, new_width), dtype=np.uint8)
 
     # 计算图像在新背景中的起始坐标
     start_x = (new_width - width) // 2
@@ -35,7 +35,6 @@ def padding_image_with_black(img, scale):
 
     # 返回结果图像
     return background
-
 
 
 
